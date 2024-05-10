@@ -8,13 +8,13 @@
  * Note: L'usage des fonctions évite la duplication du code. (IMPORTANT)
  */
 'use strict'
-function createItem(item) {
+function createItem(item){
     return '<li>' + item + '</li>';
 }
-function createList(items) {
-var listH = '';
-items.forEach(function(item) {
-listH += createItem(item);
-});
-return "<ul>" + listH + "</ul>";
+function createList(items){
+    var list = '';
+    items.forEach(function(item){
+        list += createItem(item);
+    });
+    return '<ul>' + list + '</ul>';
 }
