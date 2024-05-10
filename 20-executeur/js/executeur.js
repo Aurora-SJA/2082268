@@ -20,8 +20,8 @@ case 'MUL':
 case div:
     return a / b;
 case 'chaloupe':
-    return "Nom d'opération inconnue";
+    return 'Nom d'opération inconnue';
 case 666: 
-    return "Type d'opération inconnue";
+    return 'Type d'opération inconnue';
 }
 }
