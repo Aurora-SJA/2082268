@@ -12,9 +12,9 @@ function createItem(item) {
     return '<li>' + item + '</li>';
 }
 function createList(items) {
- var listH = '';
-    items.forEach(function(item) {
-        listH += createItem(item);
+var listH = '';
+items.forEach(function(item) {
+listH += createItem(item);
 });
 return "<ul>" + listH + "</ul>";
 }
