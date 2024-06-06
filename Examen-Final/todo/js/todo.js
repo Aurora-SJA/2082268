@@ -44,7 +44,7 @@ taskList.addEventListener("change", function(event) {
 
 taskList.addEventListener("click", function(event) {
     if (event.target.classList.contains("taskText")) {
-        event.target.classList.toggle("strikethrough");
+        event.target.classList.toggle("strike-task");
     }
 deleteButton.addEventListener("click", function() {
     const checkboxes = taskList.querySelectorAll("input[type='checkbox']:checked");
