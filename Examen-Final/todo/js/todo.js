@@ -17,6 +17,12 @@ function updateDeleteButtonState() {
 
 function addTask() {
     const taskText = taskInput.value.trim();
+    if (taskText !== "") {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `
+            <input type="checkbox" class="taskCheckbox">
+            <span class="taskText">${taskText}</span>
+        `;
 }
 
 });
