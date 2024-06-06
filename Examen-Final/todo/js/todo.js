@@ -31,7 +31,10 @@ function addTask() {
     }
     taskInput.addEventListener("input", updateAddButtonState);
     addButton.addEventListener("click", addTask);
-    taskInput.addEventListener()
+    taskInput.addEventListener("keypress", function(event){
+        if (event.key === "Enter") {
+            addTask();
+    }
 });
 
 taskList.addEventListener(){}
