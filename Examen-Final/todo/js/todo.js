@@ -23,10 +23,19 @@ function addTask() {
             <input type="checkbox" class="taskCheckbox">
             <span class="taskText">${taskText}</span>
         `;
-}
-
+        taskList.appendChild(listItem);
+            taskInput.value = "";
+            updateAddButtonState();
+            updateDeleteButtonState();
+        }
+    }
+    taskInput.addEventListener("input", updateAddButtonState);
+    addButton.addEventListener("click", addTask);
+    taskInput.addEventListener()
 });
 
+taskList.addEventListener(){}
+taskList.addEventListener(){}
 deleteButton.addEventListener("click", function() {
 
 });
