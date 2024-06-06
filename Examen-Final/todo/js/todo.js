@@ -37,8 +37,18 @@ function addTask() {
     }
 });
 
-taskList.addEventListener(){}
+taskList.addEventListener("change", function(event) {
+    if (event.target.classList.contains("taskCheckbox")) {
+        updateDeleteButtonState();
+    }
+});
 taskList.addEventListener(){}
 deleteButton.addEventListener("click", function() {
-
+    const checkboxes = taskList.querySelectorAll("input[type='checkbox']:checked");
+    checkboxes.forEach(checkbox => {
+        const listItem = checkbox.closest("li");
+        taskList.removeChild(listItem);
+    });
+    updateDeleteButtonState();
+});
 });
