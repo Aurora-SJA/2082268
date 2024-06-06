@@ -36,13 +36,16 @@ function addTask() {
             addTask();
     }
 });
-
 taskList.addEventListener("change", function(event) {
     if (event.target.classList.contains("taskCheckbox")) {
         updateDeleteButtonState();
     }
 });
-taskList.addEventListener(){}
+
+taskList.addEventListener("click", function(event) {
+    if (event.target.classList.contains("taskText")) {
+        event.target.classList.toggle("strikethrough");
+    }
 deleteButton.addEventListener("click", function() {
     const checkboxes = taskList.querySelectorAll("input[type='checkbox']:checked");
     checkboxes.forEach(checkbox => {
@@ -50,5 +53,6 @@ deleteButton.addEventListener("click", function() {
         taskList.removeChild(listItem);
     });
     updateDeleteButtonState();
+});
 });
 });
